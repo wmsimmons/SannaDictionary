@@ -4,7 +4,7 @@ from nltk.text import Text
 from nltk.tokenize import word_tokenize
 import sys
 
-#command to run app locally C:\Python34 .\python.exe C:\Users\langu\Desktop\qafasTaMalti\sanna\sannadictsite\corpusLookup.py
+
  
 def get_concordance(target_word, tar_passage, left_margin = 10, right_margin = 10):
 	"""
@@ -15,6 +15,9 @@ def get_concordance(target_word, tar_passage, left_margin = 10, right_margin = 1
 	left_margin and right_margin allocate the number of words/pununciation before and after target word
 	Left margin will take note of the beginning of the text
 	"""
+	# check for punkt tokenizer
+	if nltk.download('punkt') == False:
+		nltk.download('punkt')
 
 	## Create list of tokens using nltk function
 	tokens = word_tokenize(tar_passage)
