@@ -9,7 +9,6 @@ from flask_pymongo import PyMongo
 from nltk import * 
 import os
 
-#command to run app locally C:\Python34 .\python.exe C:\Users\langu\Desktop\qafasTaMalti\sanna\sannadictsite\main.py
 
 app = Flask(__name__)
 Bootstrap(app)
