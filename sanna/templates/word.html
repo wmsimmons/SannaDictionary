@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+ 
+{% block content %}
+
+		<p align="center">
+			<h3 id="lemmaId"> {{ entry['Sanna word']}}</h3>
+			<strong>Part of speech: </strong>
+			<br>
+			{{ entry['part of speech'] }}
+			<br>
+			<br>
+			<strong>Word/Lemma: </strong>
+			<br>
+			{{ entry['Sanna word']}}  
+			<br>
+			<br>
+			<strong>Meaning: </strong>
+			<br>
+			{{ entry['English meaning'] }}
+				
+			
+		
+{% endblock %}

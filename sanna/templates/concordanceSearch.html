@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h3>Type the word that you'd like to search in context| Axtop l-klam ta pitri fatteş fi plaisio</h3>
+
+<form class="navbar-form navbar-left" method="GET" role="search" action="/concordanceresults">
+	<div class="form-group"> 
+	   	<input type="search" class="form-control" placeholder="English <--> Sanna" name="searchword">
+	</div>
+	<button type="submit" class="btn btn-default">Search | Fatteş</button>
+</form>
+{% endblock %}
