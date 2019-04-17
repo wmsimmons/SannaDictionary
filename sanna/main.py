@@ -62,6 +62,8 @@ def concordance(word):
     return render_template('corpusLookup.html', concordance=concordance, result=result, word=word)
 
 
-"""MUST be at end of program"""
+"""MUST be at end of program | CONFIG FOR HEROKU DEPLOYMENTS"""
 if __name__ == '__main__':
-    app.run(debug=False)	
+    # Bind to PORT if defined, otherwise default to 5000.
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)	
