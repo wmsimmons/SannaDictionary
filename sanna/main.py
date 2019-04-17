@@ -53,7 +53,7 @@ def concordResults():
 
 @app.route('/lookup/<word>')
 def concordance(word):
-    raw = open("SannaDictionary/sanna/cypriotArabic.txt", "rU", encoding="utf-8").read()
+    raw = open("cypriotArabic.txt", "rU", encoding="utf-8").read()
     result = request.args.get("searchword")
     
     concordance = get_concordance(str(word), raw)
