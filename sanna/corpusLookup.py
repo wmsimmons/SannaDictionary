@@ -16,8 +16,8 @@ def get_concordance(target_word, tar_passage, left_margin = 10, right_margin = 1
 	Left margin will take note of the beginning of the text
 	"""
 	# check for punkt tokenizer
-	if nltk.download('punkt') == False:
-		nltk.download('punkt')
+	if download('punkt') == False:
+		download('punkt')
 
 	## Create list of tokens using nltk function
 	tokens = word_tokenize(tar_passage)
