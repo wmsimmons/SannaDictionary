@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+__author__ = 'wmkeilLinguist'
 
 from corpusLookup import get_concordance
 from flask import Flask, flash
