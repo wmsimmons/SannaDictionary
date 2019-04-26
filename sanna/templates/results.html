@@ -3,5 +3,40 @@
 {% block content %}
 <h3 >Results:</h3><br>
 <a href="/word/{{ word }}">{{ word }}</a>
+<br>
+<br>
+<!-- access to all the words matching the query -->
+<!-- {% if entries %} -->
+
+     <!-- each query result will display this  -->
+    {% for entry in entries %}
+        <strong>Word | Klam: </strong>
+        <br> 
+        <a href="/word/{{ entry['Sanna word']}}">{{ entry['Sanna word']}} </a>
+        <br>
+        <!-- special Sanna characters -->
+        <!-- %CE%B  = δ -->
+        <!-- %CF%87 = χ -->
+        <!-- %CE%B8 = θ -->
+        <!-- %CE%B3 = γ -->
+        <!-- %C5%9F = ş -->
+
+
+        <!-- %C3%A1 = á -->
+        <!-- %C3%AD = í -->
+        <!-- %C5%9F = ş -->
+        <strong>Meaning | Simasia fi sanna: </strong>
+        <br>
+        <a href="/word/{{ entry['English meaning'] }}">{{ entry['English meaning'] }}</a>
+        <br>
+     ______________________________________________________________________________________________
+     <br>
+     <br>
+    <!-- end of display for each query result  -->
+    {% endfor %}
+
+<!-- {% endif %} -->
+<!-- end of access to all the words matching the query -->
+
 
 {% endblock %}
