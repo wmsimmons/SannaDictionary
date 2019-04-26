@@ -17,7 +17,7 @@ Bootstrap(app)
 """for the app and mongo configs"""
 app.config['SECRET_KEY'] = '3bjd&hdj3%7@hdmSAN&**NA&**DICT&**%$324d'
 app.config['MONGO_DBNAME'] = 'sanna'
-app.config['MONGO_URI'] = 'mongodb://Sanna:sanna456@ds133166.mlab.com:33166/langilsna'
+app.config['MONGO_URI'] = 'mongodb://Sanna:sanna1974@ds133166.mlab.com:33166/langilsna'
 
 mongo = PyMongo(app)
 
