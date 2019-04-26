@@ -29,13 +29,22 @@ def home():
 def wordDisplay(word):
     result = request.args.get('searchword')
     db = mongo.db.sannaWords
-    entry = db.find_one({"English meaning":word}) or db.find_one({"Sanna word":word})
+    entry = db.find_one({"English meaning": word}) or db.find_one({"Sanna word": word})
     return render_template('word.html', word=word, entry=entry, result=result)
 
 @app.route('/results', methods=['GET', 'POST'])
 def resultDisplay():
     word = request.args.get('searchword')
-    return render_template('results.html', word=word)
+    db = mongo.db.sannaWords
+    entries = db.find({"$or": [
+     {"English meaning": { "$regex": "%s" % word}},
+     {"Sanna word": { "$regex": "%s" % word} }
+    ]})
+
+    # for entry in entries:
+    #     print(entry['Sanna word'])
+
+    return render_template('results.html', word=word, entries=entries)
 
 @app.route('/aboutproject')
 def aboutProj():
