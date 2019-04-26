@@ -4,21 +4,22 @@
 		{% if entry %}
 		<p align="center">
 			<h3 id="lemmaId"> {{ entry['Sanna word']}}</h3>
-			<strong>Part of speech: </strong>
+			<strong>Part of speech | Meros tel loγou: </strong>
 			<br>
 			{{ entry['part of speech'] }}
 			<br>
 			<br>
-			<strong>Word/Lemma: </strong>
+			<strong>Word | Klam: </strong>
 			<br>
 			{{ entry['Sanna word']}}  
 			<br>
 			<br>
-			<strong>Meaning: </strong>
+			<strong>Meaning | Simasia fi sanna: </strong>
 			<br>
 			{{ entry['English meaning'] }}
 				
 			{% else %}
 			<h2>No results found for this word, please try another word</h2>
+			<h2>Ma fia apotelesma mşan klam aδa fi sanna, parakalo, fatteş klam l-oχar</h2>
 		{% endif %}
 {% endblock %}
