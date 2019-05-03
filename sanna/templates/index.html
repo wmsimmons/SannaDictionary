@@ -27,12 +27,11 @@
 			<li role="navigation"><a href="/aboutproject">About the Project | L-şocol aδa</a></li>
 			<li role="navigation"><a href="/contextsearch">Context search | Lakiχ fi Sanna</a></li>		
 	     </ul>
-	     <form class="navbar-form navbar-left" method="GET" role="search" action="/results">
+		<form class="navbar-form navbar-left" method="GET" role="search" action="/results">
 			<div class="input-group">
 				<div class="input-group-btn keyboard">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						<!-- ċġħż -->
-							<img src="/resources/gabra/img/icon_36974_keyboard.svg?1465472213" width="16px" alt="">    <span class="caret"></span>
+							<img src="" width="16px" alt="">    <span class="caret"></span>
 						</button>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="#" class="btn btn-default" onclick="$('input#search-input').insertAtCursor('θ').focus(); return false;" )"="">θ</a></li>
@@ -43,9 +42,9 @@
 					</ul>
 					</div><!-- input-group-btn -->
 		
-					<input type="search" name="s" class="form-control" id="search-input" autofocus="true" value="" placeholder="English <--> Sanna">
+					<input type="search" class="form-control" id="search-input" name="searchword" autofocus="true" value="" placeholder="English <--> Sanna">
 					<div class="input-group-btn">
-					<button type="submit" class="btn btn-primary">Search | Fatteş</button>
+					<button type="submit" id="searchbutton" class="btn btn-primary">Search | Fatteş</button>
 				</div><!-- input-group-btn -->		
 			</div>			
 		</form>
