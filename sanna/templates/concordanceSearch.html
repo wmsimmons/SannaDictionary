@@ -4,9 +4,25 @@
 <h3>Type the word that you'd like to search in context| Axtop l-klam ta pitri fatteş fi plaisio</h3>
 
 <form class="navbar-form navbar-left" method="GET" role="search" action="/concordanceresults">
-	<div class="form-group"> 
-	   	<input type="search" class="form-control" placeholder="English <--> Sanna" name="searchword">
-	</div>
-	<button type="submit" class="btn btn-default">Search | Fatteş</button>
+	<div class="input-group">
+		<div class="input-group-btn keyboard">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+				<!-- ċġħż -->
+					<img src="" width="16px" alt="">    <span class="caret"></span>
+				</button>
+			<!-- <ul class="dropdown-menu" role="menu">
+				<li><a href="#" class="btn btn-default" onclick="$('input#search-input').insertAtCursor('θ').focus(); return false;" )"="">θ</a></li>
+				<li><a href="#" class="btn btn-default" onclick="$('input#search-input').insertAtCursor('γ').focus(); return false;" )"="">γ</a></li>
+				<li><a href="#" class="btn btn-default" onclick="$('input#search-input').insertAtCursor('δ').focus(); return false;" )"="">δ</a></li>
+				<li><a href="#" class="btn btn-default" onclick="$('input#search-input').insertAtCursor('ş').focus(); return false;" )"="">ş</a></li>
+				<li><a href="#" class="btn btn-default" onclick="$('input#search-input').insertAtCursor('χ').focus(); return false;" )"="">χ</a></li>
+			</ul> -->
+			</div><!-- input-group-btn -->
+
+			<input type="search" class="form-control" id="search-input" name="searchword" autofocus="true" value="" placeholder="English <--> Sanna">
+			<div class="input-group-btn">
+			<button type="submit" id="searchbutton" class="btn btn-default">Search | Fatteş</button>
+		</div><!-- input-group-btn -->		
+	</div>			
 </form>
 {% endblock %}
